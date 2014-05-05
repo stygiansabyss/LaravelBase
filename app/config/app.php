@@ -127,7 +127,6 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Illuminate\Remote\RemoteServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
-		'Juy\Profiler\Providers\ProfilerServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
 		'anlutro\cURL\Laravel\cURLServiceProvider',
 		'McCool\LaravelAutoPresenter\LaravelAutoPresenterServiceProvider',

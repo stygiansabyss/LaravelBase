@@ -5,18 +5,20 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.1.21",
-		"way/generators": "dev-master",
-		"wisembly/elephant.io": "dev-master",
-		"juy/profiler" : "dev-master",
 		"intervention/image": "dev-master",
-		"leafo/lessphp": "0.4.0",
-		"knplabs/github-api": "*",
 		"mccool/laravel-auto-presenter": "*",
 		"syntax/core": "dev-master",
 		"anlutro/curl": "dev-master",
 		"doctrine/dbal": "*",
-		"vespakoen/menu": "dev-master"
+		"vespakoen/menu": "dev-master",
+		"twbs/bootstrap": "3.1.1",
+		"components/jquery": "1.11.0",
+		"components/jqueryui": "1.10.4",
+        "fortawesome/font-awesome": "v4.0.3"
 	},
+    "require-dev": {
+        "way/generators": "dev-master"
+    },
 	"autoload": {
 		"classmap": [
 			"app/commands",
@@ -28,6 +30,7 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php"
 		],
+        "files": ["app/start/helpers.php"],
 		"psr-0": {
 		}
 	},
@@ -46,7 +49,8 @@
 		]
 	},
 	"config": {
-		"preferred-install": "dist"
+		"preferred-install": "dist",
+        "component-dir": "vendor/components"
 	},
 	"minimum-stability": "dev"
 }

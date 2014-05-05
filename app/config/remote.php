@@ -28,12 +28,12 @@ return array(
 
 	'connections' => array(
 		'default' => array(
-			'host'      => 'HOST',
-			'username'  => 'USERNAME',
-			'password'  => 'PASSWORD',
-			'key'       => 'KEYLOCATION',
-			'keyphrase' => 'KEYPHRASE',
-			'root'      => 'ROOT'
+			'host'      => getenv('remote_host'),
+			'username'  => getenv('remote_user'),
+			'password'  => getenv('remote_pass'),
+			'key'       => getenv('remote_key'),
+			'keyphrase' => getenv('remote_phrase'),
+			'root'      => getenv('remote_home')
 		),
 
 	),

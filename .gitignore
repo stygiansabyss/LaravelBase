@@ -7,5 +7,4 @@ composer.lock
 .DS_Store
 *error_log
 /node_modules
-/app/config/remote.php
-/app/config/database.php
+/.idea

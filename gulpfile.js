@@ -9,22 +9,24 @@ var rename     = require("gulp-rename");
 var concat     = require('gulp-concat');
 
 // Where do you store your JS files?
-var jsDir       = 'vendor/syntax/core/public/js';
+var coreJsDir   = 'vendor/syntax/core/assets/js';
+var localJsDir  = 'app/assets/js';
 var targetJSDir = 'public/js';
 
 // Extra JS
-var jquery         = 'public/js/jquery-1.10.2.min.js';
-var bootstrap      = 'public/vendor/bootstrap3/dist/js/bootstrap.min.js';
+var jquery         = 'vendor/components/jquery/jquery.js';
+var bootstrap      = 'vendor/twitter/bootstrap/dist/js/bootstrap.js';
+var jasny          = 'vendor/jasny/bootstrap/dist/js/jasny-bootstrap.js';
 var bootbox        = 'public/vendor/bootbox/bootbox.js';
 var messenger      = 'public/vendor/messenger/build/js/messenger.min.js';
 var messengerTheme = 'public/vendor/messenger/build/js/messenger-theme-future.js';
 
 // Where do you store your css files?
-var lessDir      = 'vendor/syntax/core/assets/less';
+var lessDir      = 'app/assets/less';
 var targetCSSDir = 'public/css';
 
 gulp.task('js', function() {
-	return gulp.src([jquery, jsDir + '/**/*.js', bootstrap, bootbox, messenger, messengerTheme])
+	return gulp.src([jquery, coreJsDir + '/**/*.js', localJsDir + '/**/*.js', bootstrap, jasny, bootbox, messenger, messengerTheme])
 		.pipe(uglify())
 		.pipe(concat('all.js', {"newLine": "\r\n"}))
 		.pipe(gulp.dest(targetJSDir))
@@ -56,6 +58,6 @@ gulp.task('watch', function () {
 	gulp.watch(lessDir + '/master_mixins.less', ['css', 'userCss']);
 });
 
-gulp.task('install', ['js', 'css', 'userCss']);
+gulp.task('install', ['js', 'css']);
 
 gulp.task('default', ['js', 'css', 'userCss', 'watch']);

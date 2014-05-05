@@ -53,14 +53,14 @@ return array(
 		),
 
 		'mysql' => array(
-			'driver'    => 'DRIVER',
-			'host'      => 'HOST',
-			'database'  => 'DATABASE',
-			'username'  => 'USERNAME',
-			'password'  => 'PASSWORD',
-			'charset'   => 'CHARSET',
-			'collation' => 'COLLATION',
-			'prefix'    => 'PREFIX',
+			'driver'    => 'mysql',
+			'host'      => getenv('database_host'),
+			'database'  => getenv('database_name'),
+			'username'  => getenv('database_user'),
+			'password'  => getenv('database_pass'),
+			'charset'   => 'utf8',
+			'collation' => 'utf8_unicode_ci',
+			'prefix'    => '',
 		),
 
 		'pgsql' => array(
