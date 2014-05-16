@@ -129,12 +129,12 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
 		'Intervention\Image\ImageServiceProvider',
 		'anlutro\cURL\Laravel\cURLServiceProvider',
-		'McCool\LaravelAutoPresenter\LaravelAutoPresenterServiceProvider',
+		// 'McCool\LaravelAutoPresenter\LaravelAutoPresenterServiceProvider',
 		'Menu\MenuServiceProvider',
-		'Syntax\Core\CoreServiceProvider',
-		'Syntax\Core\View\ViewServiceProvider',
-		'Syntax\Core\Control\CoreBugServiceProvider',
-		'Syntax\Core\Utility\UtilityServiceProvider',
+		'NukaCode\Core\ServiceProviders\CoreServiceProvider',
+		'NukaCode\Core\ServiceProviders\ViewServiceProvider',
+		// 'Syntax\Core\Control\CoreBugServiceProvider',
+		'NukaCode\Core\ServiceProviders\UtilityServiceProvider',
 	),
 
 	/*

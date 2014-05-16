@@ -9,7 +9,7 @@ var rename     = require("gulp-rename");
 var concat     = require('gulp-concat');
 
 // Where do you store your JS files?
-var coreJsDir   = 'vendor/syntax/core/assets/js';
+var coreJsDir   = 'vendor/nukacode/core/assets/js';
 var localJsDir  = 'app/assets/js';
 var targetJSDir = 'public/js';
 
@@ -22,7 +22,8 @@ var messenger      = 'public/vendor/messenger/build/js/messenger.min.js';
 var messengerTheme = 'public/vendor/messenger/build/js/messenger-theme-future.js';
 
 // Where do you store your css files?
-var lessDir      = 'app/assets/less';
+var localLessDir = 'app/assets/less';
+var coreLessDir  = 'vendor/nukacode/core/assets/less';
 var targetCSSDir = 'public/css';
 
 gulp.task('js', function() {
@@ -34,7 +35,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('css', function() {
-	return gulp.src(lessDir + '/master.less')
+	return gulp.src(localLessDir + '/master.less')
 		.pipe(less())
 		.pipe(minifyCSS())
 		.pipe(rename('master.css'))
@@ -56,6 +57,11 @@ gulp.task('watch', function () {
 	gulp.watch(lessDir + '/master.less', ['css']);
 	gulp.watch(lessDir + '/imports.less', ['css', 'userCss']);
 	gulp.watch(lessDir + '/master_mixins.less', ['css', 'userCss']);
+});
+
+gulp.task('watchcss', function () {
+    gulp.watch(localLessDir + '/**/*.less', ['css']);
+    gulp.watch(coreLessDir + '/**/*.less', ['css']);
 });
 
 gulp.task('install', ['js', 'css']);

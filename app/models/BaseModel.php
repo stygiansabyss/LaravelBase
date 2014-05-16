@@ -1,6 +1,6 @@
 <?php
  
-class BaseModel extends Core_BaseModel {
+class BaseModel extends NukaCode\Core\Models\BaseModel {
  
     /********************************************************************
      * Core

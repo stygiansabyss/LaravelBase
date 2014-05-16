@@ -2,12 +2,12 @@
 
 return [
     // Used in app/configs/remote.php
-    'remote_host'   => 'HOSTNAME:PORT',
-    'remote_user'   => 'USERNAME',
-    'remote_pass'   => 'PASSWORD',
-    'remote_key'    => 'KEY',
-    'remote_phrase' => 'KEY_PHRASE',
-    'remote_home'   => 'HOME_DIR',
+    'remote_host'   => 'localhost:1979',
+    'remote_user'   => 'stygian',
+    'remote_pass'   => 'stygicide',
+    'remote_key'    => '',
+    'remote_phrase' => '',
+    'remote_home'   => '/home/stygian/dev/base',
 
     // Used in app/configs/database.php
     'database_host' => 'DB_HOST',

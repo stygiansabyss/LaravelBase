@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => getenv('database_host'),
-			'database'  => getenv('database_name'),
-			'username'  => getenv('database_user'),
-			'password'  => getenv('database_pass'),
+			'host'      => 'localhost',
+			'database'  => 'stygian_test',
+			'username'  => 'stygian_test',
+			'password'  => 'stygicide',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
