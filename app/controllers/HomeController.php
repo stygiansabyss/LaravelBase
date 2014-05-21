@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends Core_HomeController {
+class HomeController extends NukaCode\Core\Controllers\HomeController {
 
     public function getIndex()
     {

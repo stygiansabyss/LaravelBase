@@ -1,6 +1,6 @@
 <?php
 
-class MenuController extends Core_BaseController
+class MenuController extends NukaCode\Core\Controllers\BaseController
 {
 
 	public function getMenu()

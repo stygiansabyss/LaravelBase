@@ -33,8 +33,9 @@
 			"vendor/nukacode/core/src/database/migrations",
 			"vendor/nukacode/core/src/database/seeds"
 		],
-        "files": ["app/start/helpers.php"],
-		"psr-0": {
+		"files": ["app/start/helpers.php"],
+		"psr-4": {
+			"NukaCode\\": "vendor/nukacode/core/src"
 		}
 	},
 	"scripts": {
@@ -53,7 +54,7 @@
 	},
 	"config": {
 		"preferred-install": "dist",
-        "component-dir": "vendor/components"
+		"component-dir": "vendor/components"
 	},
 	"minimum-stability": "dev"
 }
