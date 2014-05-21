@@ -3,12 +3,9 @@
 composer.phar
 composer.lock
 .DS_Store
-=======
-.DS_Store
-*error_log
-/node_modules
-/.idea
-._*
 .env.local.php
-.env.php
+=======
+*error_log
+/.idea
 /node_modules
+._*
