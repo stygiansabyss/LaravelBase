@@ -8,4 +8,6 @@ composer.lock
 *error_log
 /node_modules
 /.idea
-._*/node_modules/node_modules/node_modules/node_modules/node_modules/node_modules/node_modules
+._*
+.env.php
+/node_modules
