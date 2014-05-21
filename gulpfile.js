@@ -9,7 +9,7 @@ var rename     = require("gulp-rename");
 var concat     = require('gulp-concat');
 
 // Where do you store your JS files?
-var coreJsDir   = 'vendor/syntax/core/assets/js';
+var coreJsDir   = 'vendor/nukacode/core/assets/js';
 var localJsDir  = 'app/assets/js';
 var targetJSDir = 'public/js';
 
@@ -22,7 +22,9 @@ var messenger      = 'public/vendor/messenger/build/js/messenger.min.js';
 var messengerTheme = 'public/vendor/messenger/build/js/messenger-theme-future.js';
 
 // Where do you store your css files?
-var lessDir      = 'app/assets/less';
+var localLessDir = 'app/assets/less';
+var themeLessDir = 'app/assets/less/themes/dark';
+var coreLessDir  = 'vendor/nukacode/core/assets/less';
 var targetCSSDir = 'public/css';
 
 gulp.task('js', function() {
@@ -33,9 +35,17 @@ gulp.task('js', function() {
 		.pipe(notify('JS minified'))
 });
 
-gulp.task('css', function() {
-	return gulp.src(lessDir + '/master.less')
+gulp.task('css', function(theme) {
+	return gulp.src(localLessDir + '/themes/' + theme + '/master.less')
 		.pipe(less())
+		.pipe(minifyCSS())
+		.pipe(rename('master.css'))
+		.pipe(gulp.dest(targetCSSDir))
+		.pipe(notify('Master CSS minified'))
+});
+
+gulp.task('css-mini', function() {
+	return gulp.src(targetCSSDir + '/master.css')
 		.pipe(minifyCSS())
 		.pipe(rename('master.css'))
 		.pipe(gulp.dest(targetCSSDir))
@@ -56,6 +66,11 @@ gulp.task('watch', function () {
 	gulp.watch(lessDir + '/master.less', ['css']);
 	gulp.watch(lessDir + '/imports.less', ['css', 'userCss']);
 	gulp.watch(lessDir + '/master_mixins.less', ['css', 'userCss']);
+});
+
+gulp.task('watchcss', function () {
+    gulp.watch(localLessDir + '/**/*.less', ['css']);
+    gulp.watch(coreLessDir + '/**/*.less', ['css']);
 });
 
 gulp.task('install', ['js', 'css']);
