@@ -9,5 +9,6 @@ composer.lock
 /node_modules
 /.idea
 ._*
+.env.local.php
 .env.php
 /node_modules
