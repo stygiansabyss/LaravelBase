@@ -2,22 +2,25 @@
 
 // 
 // vendor/NukaCode/core/src/commands
-// 
+//
 
 Artisan::add(App::make('NukaCode\Core\Commands\InstallCommand'));
-Artisan::resolve('InstallCommand');
+Artisan::resolve('NukaCode\Core\Commands\InstallCommand');
+
+Artisan::add(App::make('NukaCode\Core\Commands\ThemeCommand'));
+Artisan::resolve('NukaCode\Core\Commands\ThemeCommand');
 
 Artisan::add(App::make('NukaCode\Core\Commands\SetupCommand'));
-Artisan::resolve('SetupCommand');
+Artisan::resolve('NukaCode\Core\Commands\SetupCommand');
 
 Artisan::add(App::make('NukaCode\Core\Commands\CleanCommand'));
-Artisan::resolve('CleanCommand');
+Artisan::resolve('NukaCode\Core\Commands\CleanCommand');
 
 Artisan::add(App::make('NukaCode\Core\Commands\DatabaseCommand'));
-Artisan::resolve('DatabaseCommand');
+Artisan::resolve('NukaCode\Core\Commands\DatabaseCommand');
 
 Artisan::add(App::make('NukaCode\Core\Commands\GulpCommand'));
-Artisan::resolve('GulpCommand');
+Artisan::resolve('NukaCode\Core\Commands\GulpCommand');
 
 Artisan::add(App::make('NukaCode\Core\Commands\UpdateCoreCommand'));
-Artisan::resolve('UpdateCoreCommand');
+Artisan::resolve('NukaCode\Core\Commands\UpdateCoreCommand');

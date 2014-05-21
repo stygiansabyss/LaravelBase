@@ -23,6 +23,7 @@ var messengerTheme = 'public/vendor/messenger/build/js/messenger-theme-future.js
 
 // Where do you store your css files?
 var localLessDir = 'app/assets/less';
+var themeLessDir = 'app/assets/less/themes/dark';
 var coreLessDir  = 'vendor/nukacode/core/assets/less';
 var targetCSSDir = 'public/css';
 
@@ -34,9 +35,17 @@ gulp.task('js', function() {
 		.pipe(notify('JS minified'))
 });
 
-gulp.task('css', function() {
-	return gulp.src(localLessDir + '/master.less')
+gulp.task('css', function(theme) {
+	return gulp.src(localLessDir + '/themes/' + theme + '/master.less')
 		.pipe(less())
+		.pipe(minifyCSS())
+		.pipe(rename('master.css'))
+		.pipe(gulp.dest(targetCSSDir))
+		.pipe(notify('Master CSS minified'))
+});
+
+gulp.task('css-mini', function() {
+	return gulp.src(targetCSSDir + '/master.css')
 		.pipe(minifyCSS())
 		.pipe(rename('master.css'))
 		.pipe(gulp.dest(targetCSSDir))
