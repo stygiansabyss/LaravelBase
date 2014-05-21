@@ -18,7 +18,7 @@ var jquery         = 'vendor/components/jquery/jquery.js';
 var bootstrap      = 'vendor/twitter/bootstrap/dist/js/bootstrap.js';
 var jasny          = 'vendor/jasny/bootstrap/dist/js/jasny-bootstrap.js';
 var bootbox        = 'public/vendor/bootbox/bootbox.js';
-var messenger      = 'public/vendor/messenger/build/js/messenger.min.js';
+var messenger      = 'public/vendor/messenger/build/js/messenger.js';
 var messengerTheme = 'public/vendor/messenger/build/js/messenger-theme-future.js';
 
 // Where do you store your css files?
