@@ -13,16 +13,12 @@ class MenuController extends NukaCode\Core\Controllers\BaseController
 			if ($this->hasPermission('DEVELOPER')) {
 				Menu::handler('mainRight')
 					->add('javascript:void(0);', 'Management', Menu::items()
-						->add('/admin', 'Dev Panel')
-						->add('/manage', 'Video Panel')
-						->add('/video/add', 'Add Video')
-						->add('/video/rss', 'RSS'));
+						->add('/admin/users', 'User Administration'));
 			}
 
 			// User Menu
 			Menu::handler('mainRight')
 				->add('/user/view/'. $this->activeUser->id, $this->activeUser->username, Menu::items()
-					->add('/messages', 'My Messages... ('. $this->activeUser->unreadMessageCount .')')
 					->add('/user/account', 'Edit Profile')
 					->add('/logout', 'Logout'));
 		} else {

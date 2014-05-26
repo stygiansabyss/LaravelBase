@@ -52,6 +52,20 @@ Log::useDailyFiles(storage_path().'/logs/'.$logFile);
 App::error(function(Exception $exception, $code)
 {
 	Log::error($exception);
+
+    if ( ! Config::get('app.debug')) return;
+
+    switch ($code)
+    {
+        case 403:
+            return View::make('errors.other')->with(['message' => $exception->getMessage()]);
+
+        case 500:
+            return View::make('errors.other')->with(['message' => $exception->getMessage()]);
+
+        default:
+            return View::make('errors.other')->with(['message' => $exception->getMessage()]);
+    }
 });
 
 /*
