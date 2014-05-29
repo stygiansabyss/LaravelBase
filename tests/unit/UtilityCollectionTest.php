@@ -51,7 +51,7 @@ class UtilityCollectionTest extends \Codeception\TestCase\Test
                 'age' => null,
                 'kids' => [
                     'name' => 'jane',
-                    'age' => 10
+                    'age' => null
                 ]
             ]
         ];
@@ -158,8 +158,6 @@ class UtilityCollectionTest extends \Codeception\TestCase\Test
         $this->assertEquals(15, $data->age);
     }
 
-    // Working on these
-
     public function testGetWhereTap()
     {
         $data = $this->collection->getWhere('kids->name', 'jess');
@@ -235,6 +233,14 @@ class UtilityCollectionTest extends \Codeception\TestCase\Test
         $data = $this->collection->getWhereInLast('kids->age', [2, 4]);
         $this->assertInstanceOf('stdClass', $data);
         $this->assertEquals(20, $data->age);
+    }
+
+    public function testGetName()
+    {
+        $data = $this->collection->first()->kids->name;
+        $this->assertEquals('zack', $data->first());
+        $this->assertInstanceOf('NukaCode\Core\Database\Collection', $data);
+        $this->assertCount(1, $data);
     }
 
 }
