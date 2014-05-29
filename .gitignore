@@ -9,3 +9,4 @@ composer.lock
 /.idea
 /node_modules
 ._*
+/tests/_log/*
