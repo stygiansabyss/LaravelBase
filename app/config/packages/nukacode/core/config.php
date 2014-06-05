@@ -29,11 +29,11 @@ return array(
     | Site Theme
     |--------------------------------------------------------------------------
     |
-    | The site theme is used to overload the core changes to bootstrap.
-    | The available themes are located in nukacode/core/assets/less/themes.
+    | The site theme is used to overload the coreOld changes to bootstrap.
+    | The available themes are located in nukacode/coreOld/assets/less/themes.
     | You can also make your own in app/assets/less/themes.  Dark is provided
     | as an example.  Use 'default' if you want to use the base style.  Set
-    | src to local to use files in app or vendor to use the files from core.
+    | src to local to use files in app or vendor to use the files from coreOld.
     |
     */
     'theme'     => [
@@ -68,7 +68,7 @@ return array(
 	| Application Menu
 	|--------------------------------------------------------------------------
 	|
-	| Use the following array to stop core from setting certain classes and keep
+	| Use the following array to stop coreOld from setting certain classes and keep
 	| the laravel defaults.  A common use for thie would be 'User'.
 	|
 	*/

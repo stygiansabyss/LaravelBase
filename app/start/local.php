@@ -2,5 +2,5 @@
 
 //
 Event::listen('creating: *', function ($view) {
-	ppd($view);
+	// ppd($view);
 });

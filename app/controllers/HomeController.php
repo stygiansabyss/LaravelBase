@@ -1,9 +1,9 @@
 <?php
 
-class HomeController extends NukaCode\Core\Controllers\HomeController {
+class HomeController extends BaseController {
 
     public function getIndex()
     {
-        // Set up your code
+        $this->skipView();
     }
 }

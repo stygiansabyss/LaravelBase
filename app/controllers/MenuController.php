@@ -12,13 +12,13 @@ class MenuController extends NukaCode\Core\Controllers\BaseController
 			// Manage Menu
 			if ($this->hasPermission('DEVELOPER')) {
 				Menu::handler('mainRight')
-					->add('javascript:void(0);', 'Management', Menu::items()
+					->add('javascript:void(0);', 'Management', Menu::items('management')
 						->add('/admin/users', 'User Administration'));
 			}
 
 			// User Menu
 			Menu::handler('mainRight')
-				->add('/user/view/'. $this->activeUser->id, $this->activeUser->username, Menu::items()
+				->add('/user/view/'. $this->activeUser->id, $this->activeUser->username, Menu::items('user')
 					->add('/user/account', 'Edit Profile')
 					->add('/logout', 'Logout'));
 		} else {
@@ -30,16 +30,5 @@ class MenuController extends NukaCode\Core\Controllers\BaseController
 
 		Menu::handler('main')
 			->add('/memberlist', 'Memberlist');
-	}
-
-	public function setAreaDetails($area)
-	{
-		$location = (Request::segment(2) != null ? ': '. ucwords(Request::segment(2)) : '');
-
-		if ($area != null) {
-			$this->pageTitle = ucwords($area).$location;
-		} else {
-			$this->pageTitle = Config::get('app.siteName'). (Request::segment(1) != null ? ': '.ucwords(Request::segment(1)) : '');
-		}
 	}
 }

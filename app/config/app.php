@@ -79,6 +79,8 @@ return array(
 
     'key'       => 'V02hAzhfd9yh92PfWDlEgPYhnJBezvtH',
 
+    'cipher'    => MCRYPT_RIJNDAEL_256,
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -131,11 +133,12 @@ return array(
         'anlutro\cURL\Laravel\cURLServiceProvider',
         // 'McCool\LaravelAutoPresenter\LaravelAutoPresenterServiceProvider',
         'Menu\MenuServiceProvider',
-        'NukaCode\Core\ServiceProviders\CoreServiceProvider',
-        'NukaCode\Core\ServiceProviders\ViewServiceProvider',
-        // 'Syntax\Core\Control\CoreBugServiceProvider',
-        'NukaCode\Core\ServiceProviders\UtilityServiceProvider',
-        'Clockwork\Support\Laravel\ClockworkServiceProvider',
+        'NukaCode\Core\CoreServiceProvider',
+        'NukaCode\Core\View\ViewServiceProvider',
+        // 'NukaCode\Core\ServiceProviders\ViewServiceProvider',
+        // // 'Syntax\Core\Control\CoreBugServiceProvider',
+        // 'NukaCode\Core\ServiceProviders\UtilityServiceProvider',
+        // 'Clockwork\Support\Laravel\ClockworkServiceProvider',
     ),
 
     /*
@@ -197,6 +200,7 @@ return array(
         'Session'     => 'Illuminate\Support\Facades\Session',
         'SSH'         => 'Illuminate\Support\Facades\SSH',
         'Str'         => 'Illuminate\Support\Str',
+        'View'        => 'Illuminate\Support\Facades\View',
         'URL'         => 'Illuminate\Support\Facades\URL',
         'Image'       => 'Intervention\Image\Facades\Image',
         'cURL'        => 'anlutro\cURL\Laravel\cURL',

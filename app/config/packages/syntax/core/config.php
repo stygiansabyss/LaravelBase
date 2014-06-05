@@ -60,14 +60,14 @@ return array(
 			'Anima'        => 'Anima'
 		),
 		'syntaxerrors' => array(
-			'core'         => 'Core Package',
+			'coreOld'         => 'Core Package',
 		),
 		'riddles8888' => array(
 			'control-room' => 'Control-Room',
 			'stygianvault' => 'StygianVault',
 			'AHScoreboard' => 'AH Scoreboard',
 			'dev-toolbox'  => 'Dev-Toolbox',
-			'core'         => 'Core',
+			'coreOld'         => 'Core',
 			'LaravelBase'  => 'Laravel Base',
 		),
 	),
@@ -90,7 +90,7 @@ return array(
 	| Application Menu
 	|--------------------------------------------------------------------------
 	|
-	| Use the following array to stop core from setting certain classes and keep
+	| Use the following array to stop coreOld from setting certain classes and keep
 	| the laravel defaults.  A common use for this would be 'User'.
 	|
 	*/

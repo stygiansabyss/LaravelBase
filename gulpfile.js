@@ -9,7 +9,7 @@ var rename     = require("gulp-rename");
 var concat     = require('gulp-concat');
 
 // Where do you store your JS files?
-var coreJsDir   = 'vendor/nukacode/core/assets/js';
+var coreJsDir   = 'vendor/nukacode/coreOld/assets/js';
 var localJsDir  = 'app/assets/js';
 var targetJSDir = 'public/js';
 
@@ -24,7 +24,7 @@ var messengerTheme = 'public/vendor/messenger/build/js/messenger-theme-future.js
 // Where do you store your css files?
 var localLessDir = 'app/assets/less';
 var themeLessDir = 'app/assets/less/themes/dark';
-var coreLessDir  = 'vendor/nukacode/core/assets/less';
+var coreLessDir  = 'vendor/nukacode/coreOld/assets/less';
 var targetCSSDir = 'public/css';
 
 gulp.task('js', function() {
