@@ -30,3 +30,8 @@ php artisan nuka:database
 ```
 
 - Once finished, make sure to edit the details in app/configs/packages/nukacode/core/config.php
+
+## Core
+This package uses NukaCode/Core for most of the heavy lifting.  Core includes a full user, permission, preference and front end set up.  See that package for more details.
+
+- [Github Project](https://github.com/NukaCode/core)
