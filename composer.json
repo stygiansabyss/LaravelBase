@@ -35,8 +35,6 @@
         "post-create-project-cmd": [
             "php artisan config:publish nukacode/core",
             "php artisan key:generate",
-            "php artisan migrate:install",
-            "php artisan nuka:database",
             "npm install --save-dev gulp gulp-autoprefixer gulp-util gulp-notify gulp-minify-css gulp-uglify gulp-less gulp-rename gulp-concat",
             "gulp install",
             "php artisan nuka:theme",
