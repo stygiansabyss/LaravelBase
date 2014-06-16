@@ -1,7 +1,6 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "nukacode/laravel-base",
+    "description": "Base install for nuka code sites.",
     "license": "MIT",
     "require": {
         "nukacode/core": "~1.0"
@@ -17,10 +16,7 @@
             "app/database/seeds",
             "app/tests/TestCase.php"
         ],
-        "files": ["app/start/helpers.php"],
-        "psr-4": {
-            "NukaCode\\Core\\": "vendor/nukacode/core/src"
-        }
+        "files": ["app/start/helpers.php"]
     },
     "scripts": {
         "post-install-cmd": [
