@@ -1,5 +1,6 @@
 ## Installation
-- composer create-package nukacode/laravel-base <project name> --prefer-dist --dev
+- composer create-package nukacode/laravel-base PROJECT_NAME --prefer-dist --dev
+    - Replace PROJECT_NAME with the name you want the folder to be 
 - Once this finishes, create an .env.local.php and add the following as needed.
 
 ```php
@@ -20,7 +21,7 @@ return [
 ];
 ```
 
-- cd <project name>
+- cd PROJECT_NAME
 - Run the following commands
 
 ```bash
