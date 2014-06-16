@@ -1,34 +1,32 @@
 <?php
 
-class MenuController extends NukaCode\Core\Controllers\BaseController
-{
+class MenuController extends NukaCode\Core\Controllers\BaseController {
 
-	public function getMenu()
-	{
-		Menu::handler('main')
-			->add('/', 'Home');
+    public function getMenu()
+    {
+        // TLR Menu
+        $this->menu = Menu::menu('mainLeft');
 
-		if (Auth::check()) {
-			// Manage Menu
-			if ($this->hasPermission('DEVELOPER')) {
-				Menu::handler('mainRight')
-					->add('javascript:void(0);', 'Management', Menu::items('management')
-						->add('/admin/users', 'User Administration'));
-			}
+        $this->addMenuItem('Home', '/', 1);
+        $this->addMenuItem('Memberlist', '/memberlist', 10000);
 
-			// User Menu
-			Menu::handler('mainRight')
-				->add('/user/view/'. $this->activeUser->id, $this->activeUser->username, Menu::items('user')
-					->add('/user/account', 'Edit Profile')
-					->add('/logout', 'Logout'));
-		} else {
-			Menu::handler('mainRight')
-				->add('/login', 'Login')
-				->add('/register', 'Register')
-				->add('/forgotPassword', 'Forgot Password');
-		}
+        $right = $this->menu->item('right');
 
-		Menu::handler('main')
-			->add('/memberlist', 'Memberlist');
-	}
+        if (Auth::check()) {
+            // Manage Menu
+            if ($this->hasPermission('DEVELOPER')) {
+                $this->addRightMenuItem('Management', 'javascript:void(0);');
+                $this->addRightSubMenuItem('management', 'User Administration', '/admin/users');
+            }
+
+            // User Menu
+            $this->addRightMenuItem($this->activeUser->username, '/user/view/' . $this->activeUser->uniqueId, null, 'user');
+            $this->addRightSubMenuItem('user', 'Edit Profile', '/user/account');
+            $this->addRightSubMenuItem('user', 'Logout', '/logout');
+        } else {
+            $this->addRightMenuItem('Login', '/login');
+            $this->addRightMenuItem('Register', '/register');
+            $this->addRightMenuItem('Forgot Password', '/forgotPassword');
+        }
+    }
 }

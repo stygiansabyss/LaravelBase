@@ -4,6 +4,6 @@ class HomeController extends BaseController {
 
     public function getIndex()
     {
-        $this->skipView();
+        // Set up your code
     }
 }

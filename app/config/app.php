@@ -106,7 +106,7 @@ return array(
         'Illuminate\Encryption\EncryptionServiceProvider',
         'Illuminate\Filesystem\FilesystemServiceProvider',
         'Illuminate\Hashing\HashServiceProvider',
-        'Illuminate\Html\HtmlServiceProvider',
+//        'Illuminate\Html\HtmlServiceProvider',
         'Illuminate\Foundation\Providers\KeyGeneratorServiceProvider',
         'Illuminate\Log\LogServiceProvider',
         'Illuminate\Mail\MailServiceProvider',
@@ -131,14 +131,11 @@ return array(
         'Way\Generators\GeneratorsServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'anlutro\cURL\Laravel\cURLServiceProvider',
-        // 'McCool\LaravelAutoPresenter\LaravelAutoPresenterServiceProvider',
-        'Menu\MenuServiceProvider',
+        'Tlr\Menu\Laravel\MenuServiceProvider',
         'NukaCode\Core\CoreServiceProvider',
         'NukaCode\Core\View\ViewServiceProvider',
-        // 'NukaCode\Core\ServiceProviders\ViewServiceProvider',
-        // // 'Syntax\Core\Control\CoreBugServiceProvider',
-        // 'NukaCode\Core\ServiceProviders\UtilityServiceProvider',
-        // 'Clockwork\Support\Laravel\ClockworkServiceProvider',
+        'NukaCode\Core\Html\HtmlServiceProvider',
+        'NukaCode\Core\Requests\AjaxServiceProvider',
     ),
 
     /*
@@ -204,7 +201,7 @@ return array(
         'URL'         => 'Illuminate\Support\Facades\URL',
         'Image'       => 'Intervention\Image\Facades\Image',
         'cURL'        => 'anlutro\cURL\Laravel\cURL',
-        'Menu'        => 'Menu\Menu',
+        'Menu'        => 'Tlr\Menu\Laravel\MenuFacade',
     ),
 
 );

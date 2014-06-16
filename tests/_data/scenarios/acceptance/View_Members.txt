@@ -1,0 +1,6 @@
+I WANT TO VIEW ALL MEMBERS
+
+I am on page '/'
+I click 'Memberlist'
+I see 'Riddles'
+I see 'Stygian'

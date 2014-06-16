@@ -1,5 +1,6 @@
 <?php
 
+use NukaCode\Core\Models\User as BaseUser;
 use Illuminate\Auth\UserInterface;
 
-class User extends NukaCode\Core\Models\User implements UserInterface {}
+class User extends BaseUser implements UserInterface {}
