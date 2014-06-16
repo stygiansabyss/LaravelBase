@@ -33,6 +33,7 @@
             "php artisan optimize"
         ],
         "post-create-project-cmd": [
+            "git init",
             "git submodule init",
             "git submodule update",
             "php artisan config:publish nukacode/core",
