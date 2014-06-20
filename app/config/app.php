@@ -132,6 +132,7 @@ return array(
         'Intervention\Image\ImageServiceProvider',
         'anlutro\cURL\Laravel\cURLServiceProvider',
         'Tlr\Menu\Laravel\MenuServiceProvider',
+        'Chumper\Datatable\DatatableServiceProvider',
         'NukaCode\Core\CoreServiceProvider',
         'NukaCode\Core\View\ViewServiceProvider',
         'NukaCode\Core\Html\HtmlServiceProvider',
@@ -202,6 +203,7 @@ return array(
         'Image'       => 'Intervention\Image\Facades\Image',
         'cURL'        => 'anlutro\cURL\Laravel\cURL',
         'Menu'        => 'Tlr\Menu\Laravel\MenuFacade',
+        'Datatable'   => 'Chumper\Datatable\Facades\DatatableFacade',
     ),
 
 );
