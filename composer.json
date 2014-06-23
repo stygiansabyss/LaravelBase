@@ -3,8 +3,7 @@
     "description": "Base install for nuka code sites.",
     "license": "MIT",
     "require": {
-        "nukacode/core": "~1.0",
-        "chumper/datatable": "2.3"
+        "nukacode/core": "1.0.*"
     },
     "require-dev": {
         "way/generators":          "2.6.1",

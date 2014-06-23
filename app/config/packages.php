@@ -3,7 +3,7 @@
 return [
     'nukacode' => [
         'laravel-base' => [
-            'version' => '1.0.5',
+            'version' => '1.0.6',
             'color'   => 'inverse',
             'icon'    => 'fa-code'
         ],
