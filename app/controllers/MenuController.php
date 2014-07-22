@@ -16,7 +16,13 @@ class MenuController extends NukaCode\Core\Controllers\BaseController {
             // Manage Menu
             if ($this->hasPermission('DEVELOPER')) {
                 $this->addRightMenuItem('Management', 'javascript:void(0);');
-                $this->addRightSubMenuItem('management', 'User Administration', '/admin/users');
+                $this->addRightSubMenuItem('management', 'Admin', '/admin');
+
+                $right  = $this->menu->item('right');
+                $parent = $right->item('management')->item('admin');
+
+                $this->addItemToMenu($parent, 'Site Admin', '/admin/site', null, null);
+                $this->addItemToMenu($parent, 'User Admin', '/admin/user', null, null);
             }
 
             // User Menu
